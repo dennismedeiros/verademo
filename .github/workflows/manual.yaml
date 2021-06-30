@@ -20,5 +20,5 @@ jobs:
           echo "- in ${{ github.event.inputs.home }}!"
 say_goodbye:
      steps:
- 	- run: |
-          echo "Goodbye!"
+ 	- run: 
+      echo "Goodbye!"
