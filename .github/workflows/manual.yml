@@ -15,10 +15,12 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Run build
+      - name: Get Input
       - run: |
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "- in ${{ github.event.inputs.home }}!"
-          
+      - name: Build
+        run: echo "Build Product"
+        
       - name: say_goodbye
-        run: echo "Hello ${{ github.event.inputs.name }}!"
+        run: echo "Goodbye!"
