@@ -1,4 +1,4 @@
-name: "SAST AnalysisExample Action"
+name: "SAST Analysis Example Action"
 description: "Receives file and generates output"
 inputs:
   file-path: # id of input
