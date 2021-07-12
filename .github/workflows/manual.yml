@@ -1,4 +1,7 @@
+# This basic workflow will run Veracode SAST analysis
+
 name: Manually triggered workflow
+
 on:
 workflow_dispatch:
     inputs:
@@ -12,15 +15,12 @@ workflow_dispatch:
         default: 'The Octoverse'
 
 jobs:
-  say_hello:
+  SAST-Analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Input
+      - name: Send Greeting
       - run: |
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "- in ${{ github.event.inputs.home }}!"
-      - name: Build
-        run: echo "Build Product"
-        
-      - name: say_goodbye
+      - name: Say Goodbye
         run: echo "Goodbye!"
