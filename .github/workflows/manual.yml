@@ -15,6 +15,11 @@ on:
         default: 'World'
         # Input has to be provided for the workflow to run
         required: true
+        
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,6 +33,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+      
+    - name: Send Location
+      run: echo "- in ${{ github.event.inputs.home }}!"
 
 
 
