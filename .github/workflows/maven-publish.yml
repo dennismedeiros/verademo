@@ -61,8 +61,8 @@ jobs:
               path: # optional
   
   
-    - name: Display structure of downloaded files
-      run: ls -R
+      - name: Display structure of downloaded files
+        run: ls -R
   
   
   
