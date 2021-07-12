@@ -31,43 +31,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
+    - name: Send Greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
       
     - name: Send Location
       run: echo "- in ${{ github.event.inputs.home }}!"
 
+    - name: Retrieve Latest Static Analysis Pipeline Scanner Client
+      run: echo "Getting Client Tool"
+      
+    - name: Convert Static Analysis output to SARIF format
+      run: echo "Convert to SARIF"
 
-
-# This basic workflow will run Veracode SAST analysis
-
-#name: Manually triggered workflow
-
-##on:
-#workflow_dispatch:
-#    inputs:
-#      name:
-#        description: 'Person to greet'
-#        required: true
-##        default: 'Mona the Octocat'
-#      home:
-#        description: 'location'
-#        required: false
-#        default: 'The Octoverse'
-
-#jobs:
- # This workflow contains a single job called "SAST-Analysis"
-#  SAST-Analysis:
-    # The type of runner that the job will run on
-#    runs-on: ubuntu-latest
-    
-    # Steps represent a sequence of tasks that will be executed as part of the job
-#    steps:
-#      - name: Send Greeting
-      # Runs a single command using the runners shell
- #       run: echo "Hello ${{ github.event.inputs.name }}!"
-          
-          #- run: | 
-          #echo "- in ${{ github.event.inputs.home }}!"
-     # - name: Say Goodbye
-     #   run: echo "Goodbye!"
