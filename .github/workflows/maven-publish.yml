@@ -52,11 +52,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2.0.10
         with: 
           name:  my-artifact
           path:  analysis/
-      - uses: actions/checkout@v2
       - uses: ./.github/actions/sast-analysis-action
    
     
