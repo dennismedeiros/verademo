@@ -23,17 +23,17 @@ description: "Receives file and generates output"
  # results-file: # id of output
  #   description: "Path to results file"
  
- 
-runs-on: ubuntu-latest
-steps:
-  - name: Download a Build Artifact
-    uses: actions/download-artifact@v2.0.10
-    with:
-          # Artifact name
-          name:  my-artifact
-          # Destination path
-          path: # optional
+runs:
+  using: "composite"
+  steps:
+     - name: Download a Build Artifact
+       uses: actions/download-artifact@v2.0.10
+       with:
+             # Artifact name
+             name:  my-artifact
+             # Destination path
+             path: # optional
 
 
-  - name: Display structure of downloaded files
-    run: ls -R
+     - name: Display structure of downloaded files
+       run: ls -R
