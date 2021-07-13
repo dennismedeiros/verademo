@@ -24,16 +24,18 @@ description: "Receives file and generates output"
  #   description: "Path to results file"
  
 runs:
-  #using: "composite"
+  using: "composite"
   steps:
-     - name: Download a Build Artifact
-       uses: actions/download-artifact@v2.0.10
-       with:
+    # - name: Download a Build Artifact
+    #   uses: actions/download-artifact@v2.0.10
+    #   with:
              # Artifact name
-             name:  my-artifact
+    #         name:  my-artifact
              # Destination path
-             path: # optional
+    #         path: # optional
 
-
+     - name: Say Hello
+       run: echo "HELLO"
+       
      - name: Display structure of downloaded files
        run: ls -R
