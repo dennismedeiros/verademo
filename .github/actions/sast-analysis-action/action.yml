@@ -36,8 +36,8 @@ runs:
 
      - name: Say Hello
        run: echo "HELLO"
-       shell: sh
+       shell: bash
        
      - name: Display structure of downloaded files
        run: ls -R
-       shell: sh
+       shell: bash
