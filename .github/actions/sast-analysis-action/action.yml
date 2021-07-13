@@ -24,7 +24,7 @@ description: "Receives file and generates output"
  #   description: "Path to results file"
  
 runs:
-  using: "composite"
+  #using: "composite"
   steps:
      - name: Download a Build Artifact
        uses: actions/download-artifact@v2.0.10
