@@ -1,5 +1,11 @@
 name: "SAST Analysis Example Action"
+author: "Dennis Medeiros"
+branding:
+   icon: 'shield'
+   color: 'green'
+   
 description: "Receives file and generates output"
+
 #inputs:
 
    # name:
