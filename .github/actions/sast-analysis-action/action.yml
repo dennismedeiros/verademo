@@ -1,24 +1,39 @@
 name: "SAST Analysis Example Action"
 description: "Receives file and generates output"
-inputs:
+#inputs:
 
-    name:
+   # name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
+       # description: 'Person to greet'
         # Default value if no value is explicitly provided
-        default: 'World'
+       # default: 'World'
         # Input has to be provided for the workflow to run
-        required: true
+       # required: true
 
   #file-path: # id of input
   #  description: "Path to test script"
   #  required: true
   #  default: "test-file.js"
 
-steps:
-    run: echo "Hello ${{ github.event.inputs.name }}"
+#steps:
+#    run: echo "Hello ${{ github.event.inputs.name }}"
     
     
  #   outputs:
  # results-file: # id of output
  #   description: "Path to results file"
+ 
+ 
+runs-on: ubuntu-latest
+steps:
+  - name: Download a Build Artifact
+    uses: actions/download-artifact@v2.0.10
+    with:
+          # Artifact name
+          name:  my-artifact
+          # Destination path
+          path: # optional
+
+
+  - name: Display structure of downloaded files
+    run: ls -R
