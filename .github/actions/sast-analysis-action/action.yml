@@ -40,3 +40,4 @@ runs:
        
      - name: Display structure of downloaded files
        run: ls -R
+       shell: sh
