@@ -56,7 +56,7 @@ jobs:
         with: 
           name:  my-artifact
           path:  analysis/
-      #- uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/sast-analysis-action
    
     
