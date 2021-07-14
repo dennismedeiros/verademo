@@ -41,9 +41,9 @@ runs:
        shell: bash
        
      - name: input provided
-       run: echo "Name: ${{ github.event.inputs.name }}"
+       run: echo "Name: ${{ inputs.name }}"
        shell: bash
      
     - name:  file-path provided
-       run: echo "file-path: ${{ github.event.inputs.filePath }}"
+       run: echo "file-path: ${{ inputs.filePath }}"
        shell: bash
