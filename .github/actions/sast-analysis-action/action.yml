@@ -11,7 +11,11 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
-
+  octocatEyeColor:
+    description: 'Eye color of the Octocats'
+    required: true
+    default: 'target/verademo.war'
+    
    #filePath: # id of input
    #   description: "Path to test script"
   #    default: "target/verademo.war"
@@ -29,6 +33,8 @@ runs:
   using: "composite"
   steps:
       - run: echo Hello ${{ inputs.who-to-greet }}.
+        shell: bash
+      - run: echo Hello ${{ inputs.octocatEyeColor }}.
         shell: bash
       - name: Say Hello
         run: echo "HELLO"
