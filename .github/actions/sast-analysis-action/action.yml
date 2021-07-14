@@ -12,7 +12,7 @@ inputs:
       default: 'World'
       required: true
 
-  file-path: # id of input
+   filePath: # id of input
       description: "Path to test script"
       default: "target/verademo.war"
       required: true
@@ -31,13 +31,13 @@ runs:
      - name: Say Hello
        run: echo "HELLO"
        shell: bash
+     
+     - name: whoami
+       run: whoami
+       shell: bash
        
      - name: Display structure of files
        run: ls -R
-       shell: bash
-       
-     - name: whoami
-       run: whoami
        shell: bash
        
      - name: input provided
@@ -45,5 +45,5 @@ runs:
        shell: bash
      
     - name:  file-path provided
-       run: echo "file-path: ${{ github.event.inputs. file-path }}"
+       run: echo "file-path: ${{ github.event.inputs.filePath }}"
        shell: bash
