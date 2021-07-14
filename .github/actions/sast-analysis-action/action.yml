@@ -54,6 +54,7 @@ runs:
      
      - name: install curl
        run: apt-get install -y curl
+       shell: bash
        
      #- name: Get Veracode Pipeline Scanner
      #  run: curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
