@@ -2,10 +2,10 @@ pipeline {
     agent any
 	stages {
         stage('Build') {
-            withMaven {
-                sh 'mvn package' 
+            steps{
+			    sh 'mvn package' 
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
-            }
+			}
         }
     }
 }
