@@ -36,6 +36,13 @@ runs:
         shell: bash
       - run: echo Hello ${{ inputs.octocatEyeColor }}.
         shell: bash
+        
+      - run: echo Hello ${{ secrets.VERACODE_API_ID_TEST }}.
+        shell: bash
+      
+      - run: echo Hello ${{ secrets.VERACODE_API_KEY_TEST }}.
+        shell: bash
+        
       - name: Say Hello
         run: echo "HELLO"
         shell: bash
