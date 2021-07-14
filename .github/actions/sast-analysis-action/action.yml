@@ -32,18 +32,16 @@ runs:
        run: echo "HELLO"
        shell: bash
      
-     - name: whoami
-       run: whoami
-       shell: bash
+    # - name: whoami
+    #   run: whoami
+    #   shell: bash
        
-     - name: Display structure of files
-       run: ls -R
-       shell: bash
+   #  - name: Display structure of files
+   #    run: ls -R
+   #    shell: bash
        
-     - name: input provided
-       run: echo "Name: ${{ inputs.name }}"
-       shell: bash
+    - run: echo "Name: ${{ inputs.name }}"
+      shell: bash
      
-    - name:  file-path provided
-       run: echo "file-path: ${{ inputs.filePath }}"
-       shell: bash
+    - run: echo "file-path: ${{ inputs.filePath }}"
+      shell: bash
