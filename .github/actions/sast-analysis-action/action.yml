@@ -40,8 +40,8 @@ runs:
    #    run: ls -R
    #    shell: bash
        
-    - run: echo "Name: ${{ inputs.name }}"
+    - run: echo name: ${{ inputs.name }}
       shell: bash
      
-    - run: echo "file-path: ${{ inputs.filePath }}"
+    - run: echo file-path: ${{ inputs.filePath }}
       shell: bash
