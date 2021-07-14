@@ -7,10 +7,10 @@ branding:
 description: "Receives file and generates output"
 
 inputs:
-   name: 
-      description: 'Person to greet'
-      default: 'World'
-      required: true
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
 
    filePath: # id of input
       description: "Path to test script"
@@ -28,9 +28,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-     - name: Say Hello
-       run: echo "HELLO"
-       shell: bash
+      - run: echo Hello ${{ inputs.who-to-greet }}.
+        shell: bash
+      - name: Say Hello
+        run: echo "HELLO"
+        shell: bash
      
     # - name: whoami
     #   run: whoami
@@ -40,8 +42,7 @@ runs:
    #    run: ls -R
    #    shell: bash
        
-    - run: echo name: ${{ inputs.name }}
-      shell: bash
+  
      
-    - run: echo file-path: ${{ inputs.filePath }}
-      shell: bash
+   # - run: echo file-path: ${{ inputs.filePath }}
+   #   shell: bash
