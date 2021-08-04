@@ -57,7 +57,7 @@ jobs:
         with: 
           name:  my-artifact
           path:  analysis/
-      - uses: ./.github/actions/sast-analysis-action
+      - uses: .github/actions/sast-analysis-action@main
    
     
     
