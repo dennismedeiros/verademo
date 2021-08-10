@@ -28,6 +28,7 @@ steps:
     apiId: $(vid)
     apiKey: $(vkey)
     veracodeAppProfile: '$(system.teamProject)'
+    sandboxName: 'ADO Development Sandbox'
     version: '$(build.buildNumber)'
     filepath: '$(build.artifactstagingdirectory)'
     maximumWaitTime: '360'
