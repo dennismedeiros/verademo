@@ -30,9 +30,9 @@ stages:
             PathtoPublish: '$(Agent.BuildDirectory)/s/target/verademo.war'
             ArtifactName: 'drop'
 
-- stage: Testing
+- stage: Security_Testing
   jobs: 
-    - job: SAST_Platform
+    - job: Veracode_SAST_Platform
       displayName: Veracode SAST Platform Scan
       pool: 
           vmImage: 'ubuntu-latest'
