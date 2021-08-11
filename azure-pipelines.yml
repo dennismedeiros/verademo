@@ -50,8 +50,8 @@ stages:
             ConnectionDetailsSelection: 'Credentials'
             apiId: $(vid)
             apiKey: $(vkey)
-            veracodeAppProfile: '$(system.teamProject)'
+            veracodeAppProfile:  'verademo' #'$(system.teamProject)'
             sandboxName: 'ADO Development Sandbox'
             version: '$(build.buildNumber)'
-            filepath: '$(System.ArtifactsDirectory)'
+            filepath: '/home/vsts/work/1/a/drop/verademo.war'   #$(System.ArtifactsDirectory)'
             maximumWaitTime: '360'
