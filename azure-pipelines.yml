@@ -32,7 +32,7 @@ stages:
 
 - stage: Testing
   jobs: 
-    - job: SAST-Platform
+    - job: SAST_Platform
       displayName: Veracode SAST Platform Scan
       dependsOn: Build
       pool: 
