@@ -34,7 +34,6 @@ stages:
   jobs: 
     - job: SAST_Platform
       displayName: Veracode SAST Platform Scan
-      dependsOn: Build
       pool: 
           vmImage: 'ubuntu-latest'
       steps: 
