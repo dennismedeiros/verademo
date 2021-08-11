@@ -53,5 +53,5 @@ stages:
             veracodeAppProfile: '$(system.teamProject)'
             sandboxName: 'ADO Development Sandbox'
             version: '$(build.buildNumber)'
-            filepath: '$(build.artifactstagingdirectory)'
+            filepath: '$(System.ArtifactsDirectory)'
             maximumWaitTime: '360'
